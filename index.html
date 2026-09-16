@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOTLINE MIAMI: NEON REQUIEM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="gameContainer">
+    <canvas id="canvas" width="1280" height="800"></canvas>
+    <div id="scanlines"></div>
+    <div id="vignetteOverlay"></div>
+    <div id="slowMoOverlay"></div>
+    <div id="damageFlash"></div>
+
+    <div id="achievementToast">
+        <div class="ach-title">ДОСТИЖЕНИЕ РАЗБЛОКИРОВАНО</div>
+        <div class="ach-name" id="achName"></div>
+        <div class="ach-desc" id="achDesc"></div>
+    </div>
+
+    <div id="menu">
+        <div class="menu-content">
+            <h1>HOTLINE MIAMI</h1>
+            <div class="subtitle">NEON REQUIEM</div>
+
+            <div id="menuMain">
+                <p>Двигайся быстро. Убивай быстро. Не останавливайся.</p>
+                <p class="controls">
+                    <span class="key">W A S D</span> движение
+                    <span class="key">МЫШЬ</span> прицел
+                    <span class="key">ЛКМ</span> огонь
+                    <span class="key">SHIFT</span> рывок
+                    <span class="key">R</span> перезарядка
+                    <span class="key">1-4</span> оружие
+                    <span class="key">E</span> добить
+                    <span class="key">ESC</span> пауза
+                </p>
+                <p class="hint">Комбо повышает счёт. Точность важна. Смерть — мгновенна.</p>
+                <div class="menu-buttons">
+                    <button class="btn" id="playBtn">ИГРАТЬ</button>
+                    <button class="btn btn-secondary" id="levelsBtn">УРОВНИ</button>
+                    <button class="btn btn-secondary" id="howToBtn">КАК ИГРАТЬ</button>
+                </div>
+            </div>
+
+            <div id="menuLevels" class="hidden">
+                <h2>ВЫБОР УРОВНЯ</h2>
+                <div class="level-grid" id="levelGrid"></div>
+                <button class="btn btn-secondary" id="backFromLevels">НАЗАД</button>
+            </div>
+
+            <div id="menuHowTo" class="hidden">
+                <h2>КАК ИГРАТЬ</h2>
+                <div class="stat-panel" id="howToKeys"></div>
+                <div class="stat-panel cyan" id="howToWeapons"></div>
+                <button class="btn btn-secondary" id="backFromHowTo">НАЗАД</button>
+            </div>
+            <div class="credits">СДЕЛАНО С <span class="hl">♥</span> ДЛЯ ФАНАТОВ HOTLINE MIAMI</div>
+        </div>
+    </div>
+
+    <div id="pauseMenu" class="hidden">
+        <h2>ПАУЗА</h2>
+        <div class="menu-buttons">
+            <button class="btn" id="resumeBtn">ПРОДОЛЖИТЬ</button>
+            <button class="btn btn-secondary" id="restartLevelBtn">ЗАНОВО</button>
+            <button class="btn btn-secondary" id="quitToMenuBtn">В МЕНЮ</button>
+        </div>
+    </div>
+
+    <div id="levelComplete" class="hidden">
+        <h2>УРОВЕНЬ ПРОЙДЕН</h2>
+        <div class="rating" id="ratingStars">★★★</div>
+        <div class="stat-panel" id="completeStats"></div>
+        <div class="menu-buttons">
+            <button class="btn" id="nextLevelBtn">СЛЕДУЮЩИЙ УРОВЕНЬ</button>
+            <button class="btn btn-secondary" id="retryLevelBtn">ЕЩЁ РАЗ</button>
+            <button class="btn btn-secondary" id="completeToMenuBtn">В МЕНЮ</button>
+        </div>
+    </div>
+
+    <div id="gameOver" class="hidden">
+        <h1 class="red">ТЫ ПОГИБ</h1>
+        <p class="dead-hint">Нажми ENTER чтобы попробовать снова</p>
+        <div class="menu-buttons">
+            <button class="btn" id="retryBtn">ЗАНОВО</button>
+            <button class="btn btn-secondary" id="gameOverToMenuBtn">В МЕНЮ</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
